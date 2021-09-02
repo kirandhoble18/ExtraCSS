@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+div.container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 50vh;
+    background-color: black;
+}
+
+div.container div.ball{
+    width:100px;
+    height:100px;
+    background-color: blueviolet;
+   
+}
+div.ball {
+    margin: 10px;
+animation-duration: 2s;
+ animation-name: stylish-rotate;
+animation-fill-mode: forwards;
+animation-iteration-count: infinite;
+animation-delay: 1s;
+
+}
+div.ball:nth-child(2)
+{
+    animation-delay: 2s;
+    animation-name: bounce;
+    animation-duration: 2s;
+}
+div.ball:nth-child(3)
+{
+    animation-delay: 2.5s;
+   
+}
+div.ball:nth-child(4)
+{
+    animation-delay: 3s;
+    animation-name: bounce;
+    animation-duration: 2s;
+}
+   @keyframes bounce
+   {
+       0%{}
+       25%{
+           transform: translateY(0px);
+       }
+       50%{
+           transform: translateY(100px);
+       }
+       75%{
+           transform:translateY(0px)
+       }
+   }
+   @keyframes stylish-rotate {
+    0% {background-color: red;}
+    25%{
+        background-color: palegreen;
+    }
+    50%{
+        background-color: green;
+    }
+    100% {
+       transform:rotate(360deg);
+        background-color: orange;
+     
+    }
+
+}
